@@ -4,7 +4,9 @@
 
 قالب تک‌فایل HTML برای صفحهٔ معرفی (لندینگ) یک محصول هوش مصنوعی — مثلاً پلتفرم ایجنت‌های هوش مصنوعی، ابزار خودکارسازی یا هر محصول SaaS.
 
-### چه چیزی داخل آن است؟
+> **نسخهٔ نمایشی (دمو):** فایلی که در این ریپو می‌بینید نسخهٔ دموی قالب است — بخش‌های هیرو، ویژگی‌ها و نحوهٔ کار را نشان می‌دهد تا ببینید به کارتان می‌آید یا نه. نسخهٔ کامل (با جدول قیمت، نقل‌قول مشتری، سوالات متداول و بدون بنر دمو) فقط بعد از پرداخت ارسال می‌شود.
+
+### چه چیزی داخل نسخهٔ کامل است؟
 
 - **هدر چسبان** با منو و دکمهٔ فراخوان (CTA) — در موبایل به منوی همبرگری تبدیل می‌شود
 - **بخش هیرو** با تیتر، توضیح، دو دکمه و آمار (تعداد وظایف، ساعت‌های صرفه‌جویی‌شده و…)
@@ -25,7 +27,11 @@
 
 ### قیمت و خرید
 
-**۵ دلار** — پرداخت با USDT / USDC / SOL. برای خرید در ایکس به [@mehdivakili060](https://x.com/mehdivakili060) پیام بدهید.
+**۵ دلار** — نسخهٔ کامل را این‌طور بخرید:
+
+1. مبلغ را به کیف پول سولانا واریز کنید: `HqxvhpdWdBvjk1JvCwLdrp3fW47Zt1A8Eg1atDwZ3oQQ` (USDC یا USDT یا SOL در شبکهٔ سولانا)
+2. هش تراکنش و ایمیلت را در ایکس به [@mehdivakili060](https://x.com/mehdivakili060) بفرستید
+3. نسخهٔ کامل را تا ۲۴ ساعت بعد با ایمیل دریافت می‌کنید
 
 ---
 
@@ -33,7 +39,9 @@
 
 A single-file HTML landing page template for an AI product — e.g. an AI-agent platform, an automation tool, or any SaaS product.
 
-### What's inside
+> **Demo version:** the file in this repo is the demo of the template — it shows the hero, features and how-it-works sections so you can see if it fits your needs. The full version (with the pricing table, testimonial, FAQ and no demo banner) is sent only after payment.
+
+### What's inside the full version
 
 - **Sticky header** with navigation and CTA — collapses to a hamburger menu on mobile
 - **Hero section** with headline, subtext, two CTAs and a stats row
@@ -54,7 +62,11 @@ Open `index.html` in a browser or upload it to any static host (GitHub Pages, Ne
 
 ### Price & purchase
 
-**$5** — pay with USDT / USDC / SOL. To buy, message [@mehdivakili060](https://x.com/mehdivakili060) on X.
+**$5** — buy the full version like this:
+
+1. Pay to the Solana wallet: `HqxvhpdWdBvjk1JvCwLdrp3fW47Zt1A8Eg1atDwZ3oQQ` (USDC, USDT or SOL on Solana)
+2. Send the transaction ID and your email to [@mehdivakili060](https://x.com/mehdivakili060) on X
+3. You will receive the full version by email within 24 hours
 
 ## License
 

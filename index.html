@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- EDIT: Change the page title and meta description to your product's name. -->
-<title>AgentFlow — AI Agents That Do the Work</title>
-<meta name="description" content="AgentFlow turns your instructions into finished work. Deploy AI agents that research, write, code and report back — with you in control.">
+<!-- DEMO VERSION of the AgentFlow landing page template.
+     This demo shows the design (hero + features + how it works).
+     The full version adds the pricing table, testimonial, FAQ and final CTA,
+     and ships without this demo banner. Buy it for $5 — see the README. -->
+<title>AgentFlow — AI Agents That Do the Work (Demo)</title>
+<meta name="description" content="Demo of the AgentFlow landing page template. The full version is a single HTML file you can edit and publish.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  /* EDIT: Change these colors to match your brand. */
   :root{
     --bg:#0a0f1e; --surface:#111827; --surface2:#1a2438; --border:#243349;
     --text:#eef2f7; --muted:#9aa8bd; --accent:#6c8cff; --accent2:#22d3ee;
@@ -19,8 +21,8 @@
   body{background:var(--bg); color:var(--text); font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif; line-height:1.6}
   a{color:inherit; text-decoration:none}
   .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
-  /* EDIT: Nav links and CTA text. */
-  header{position:sticky; top:0; z-index:10; background:rgba(10,15,30,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--border)}
+  .demo-ribbon{background:#f59e0b; color:#1a1005; text-align:center; padding:9px 16px; font-weight:700; font-size:14px; position:sticky; top:0; z-index:20}
+  header{position:sticky; top:38px; z-index:10; background:rgba(10,15,30,.85); backdrop-filter:blur(10px); border-bottom:1px solid var(--border)}
   nav{display:flex; align-items:center; justify-content:space-between; height:64px}
   .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px}
   .logo-mark{width:32px; height:32px; border-radius:9px; display:grid; place-items:center; font-size:14px; font-weight:800; color:#fff; background:linear-gradient(135deg,var(--accent),var(--accent2))}
@@ -31,7 +33,6 @@
   .btn-ghost{border-color:var(--border); color:var(--text); background:transparent}
   .btn-sm{padding:8px 16px; font-size:14px}
   .menu-btn{display:none; background:none; border:1px solid var(--border); color:var(--text); border-radius:8px; padding:8px 12px; cursor:pointer}
-  /* Hero */
   .hero{padding:88px 0 64px; text-align:center}
   .badge{display:inline-block; padding:6px 14px; border:1px solid var(--border); border-radius:999px; font-size:13px; color:var(--muted); margin-bottom:22px}
   .badge b{color:var(--accent2)}
@@ -43,10 +44,8 @@
   .stats{display:flex; gap:40px; justify-content:center; flex-wrap:wrap; margin-top:56px}
   .stat b{display:block; font-size:28px}
   .stat span{font-size:14px; color:var(--muted)}
-  /* Logos */
   .logos{padding:28px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border); text-align:center; color:var(--muted); font-size:14px}
   .logos strong{display:flex; gap:36px; justify-content:center; flex-wrap:wrap; margin-top:12px; font-size:17px; color:var(--text); font-weight:700}
-  /* Sections */
   section{padding:72px 0}
   h2{font-size:clamp(26px,4vw,36px); font-weight:800; letter-spacing:-.01em; text-align:center; margin-bottom:12px}
   .sub{text-align:center; color:var(--muted); max-width:600px; margin:0 auto 44px}
@@ -55,35 +54,19 @@
   .card .icon{font-size:24px; margin-bottom:12px}
   .card h3{font-size:17px; margin-bottom:6px}
   .card p{font-size:15px; color:var(--muted)}
-  /* Steps */
   .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; counter-reset:step}
-  .step{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px; position:relative}
+  .step{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px}
   .step::before{counter-increment:step; content:counter(step); display:grid; place-items:center; width:34px; height:34px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent2)); font-weight:800; margin-bottom:14px}
   .step h3{font-size:17px; margin-bottom:6px}
   .step p{font-size:15px; color:var(--muted)}
-  /* Pricing */
-  .pricing{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; align-items:stretch}
-  .price-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; display:flex; flex-direction:column}
-  .price-card.popular{border-color:var(--accent); background:var(--surface2)}
-  .price-card h3{font-size:18px}
-  .price{font-size:40px; font-weight:800; margin:12px 0 4px}
-  .price span{font-size:15px; color:var(--muted); font-weight:400}
-  .price-card ul{list-style:none; margin:18px 0 24px; flex:1}
-  .price-card li{padding:6px 0; color:var(--muted); font-size:15px}
-  .price-card li::before{content:"✓ "; color:var(--accent2)}
-  .tag{display:inline-block; background:var(--accent); color:#fff; font-size:12px; font-weight:700; padding:3px 10px; border-radius:999px; margin-bottom:8px}
-  /* Testimonial + FAQ */
-  .quote{max-width:720px; margin:0 auto; text-align:center; font-size:20px; font-weight:600}
-  .quote footer{margin-top:18px; font-size:15px; color:var(--muted); font-weight:400}
-  .avatar{display:inline-grid; place-items:center; width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent2)); font-weight:800; vertical-align:middle; margin-right:10px}
-  details{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px 22px; margin-bottom:12px; max-width:760px; margin-left:auto; margin-right:auto}
-  summary{cursor:pointer; font-weight:600}
-  details p{color:var(--muted); font-size:15px; margin-top:10px}
-  /* Final CTA + footer */
-  .final{text-align:center; background:linear-gradient(135deg,rgba(108,140,255,.16),rgba(34,211,238,.12)); border:1px solid var(--border); border-radius:20px; padding:56px 24px}
-  footer{border-top:1px solid var(--border); padding:32px 0; color:var(--muted); font-size:14px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px}
+  .buy{background:linear-gradient(135deg,rgba(108,140,255,.16),rgba(34,211,238,.12)); border:1px solid var(--border); border-radius:20px; padding:48px 28px; text-align:center}
+  .buy code{display:block; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:12px; margin:18px auto; max-width:560px; font-size:14px; word-break:break-all}
+  .buy ol{text-align:left; max-width:520px; margin:0 auto 22px; color:var(--muted)}
+  .buy ol li{margin:8px 0}
+  .buy ol b{color:var(--text)}
+  footer{border-top:1px solid var(--border); padding:32px 0; color:var(--muted); font-size:14px}
   @media (max-width:760px){
-    .grid,.steps,.pricing{grid-template-columns:1fr}
+    .grid,.steps{grid-template-columns:1fr}
     .nav-links{display:none}
     .nav-links.open{display:flex; flex-direction:column; position:absolute; top:64px; left:0; right:0; background:var(--surface); padding:18px 20px; border-bottom:1px solid var(--border)}
     .menu-btn{display:block}
@@ -92,6 +75,7 @@
 </style>
 </head>
 <body>
+<div class="demo-ribbon">DEMO VERSION — the full template (pricing, testimonial, FAQ) is sent after purchase. See “Buy the full version” below.</div>
 <header>
   <div class="wrap">
     <nav>
@@ -99,12 +83,10 @@
       <div class="nav-links" id="navLinks">
         <a href="#features">Features</a>
         <a href="#how">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
+        <a href="#buy">Buy</a>
       </div>
       <div style="display:flex; gap:10px; align-items:center">
-        <a class="btn btn-ghost btn-sm" href="#pricing">Sign in</a>
-        <a class="btn btn-primary btn-sm" href="#pricing">Start free</a>
+        <a class="btn btn-primary btn-sm" href="#buy">Get the full version — $5</a>
         <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
       </div>
     </nav>
@@ -112,16 +94,15 @@
 </header>
 
 <main>
-  <!-- EDIT: Hero headline, subtext and buttons. -->
   <div class="wrap hero">
     <span class="badge"><b>New</b> &nbsp;Multi-agent teams are here</span>
     <h1>Your AI agents, doing <span>real work</span> while you sleep</h1>
     <p>Give AgentFlow an instruction. Your agents research, write, code and report back — and nothing ships without your approval.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#pricing">Start building free</a>
+      <a class="btn btn-primary" href="#buy">Get the full version — $5</a>
       <a class="btn btn-ghost" href="#how">See how it works</a>
     </div>
-    <p class="hero-note">Free plan · No credit card · Cancel anytime</p>
+    <p class="hero-note">Demo version · The full template has no demo banner</p>
     <div class="stats">
       <div class="stat"><b>2.4M+</b><span>tasks completed</span></div>
       <div class="stat"><b>180k</b><span>hours saved</span></div>
@@ -134,7 +115,6 @@
     <strong><span>Northwind</span><span>Helios</span><span>Craftly</span><span>Datawise</span><span>Loopwork</span></strong>
   </div>
 
-  <!-- EDIT: Feature cards — change the icon, title and text. -->
   <section id="features">
     <div class="wrap">
       <h2>Everything your agents need</h2>
@@ -162,61 +142,18 @@
     </div>
   </section>
 
-  <!-- EDIT: Pricing tiers and prices. -->
-  <section id="pricing">
-    <div class="wrap">
-      <h2>Simple pricing</h2>
-      <p class="sub">Start free. Upgrade when your agents start saving you real hours.</p>
-      <div class="pricing">
-        <div class="price-card">
-          <h3>Starter</h3>
-          <div class="price">$0<span>/month</span></div>
-          <ul><li>1 agent, 50 tasks / month</li><li>Core integrations</li><li>Community support</li></ul>
-          <a class="btn btn-ghost" href="#">Start free</a>
-        </div>
-        <div class="price-card popular">
-          <span class="tag">MOST POPULAR</span>
-          <h3>Pro</h3>
-          <div class="price">$19<span>/month</span></div>
-          <ul><li>5 agents, unlimited tasks</li><li>Multi-agent teams</li><li>Human approval rules</li><li>Priority support</li></ul>
-          <a class="btn btn-primary" href="#">Start 14-day trial</a>
-        </div>
-        <div class="price-card">
-          <h3>Team</h3>
-          <div class="price">$49<span>/month</span></div>
-          <ul><li>Unlimited agents &amp; seats</li><li>SSO &amp; permissions</li><li>Audit logs</li><li>Dedicated manager</li></ul>
-          <a class="btn btn-ghost" href="#">Talk to sales</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <blockquote class="quote">
-        "We gave AgentFlow our Monday reporting. It now arrives finished before we open our laptops."
-        <footer><span class="avatar">SK</span>Sara Kim, Operations Lead at Craftly</footer>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- EDIT: FAQ questions and answers. -->
-  <section id="faq">
-    <div class="wrap">
-      <h2>Questions, answered</h2>
-      <p class="sub">Anything else? Write to hello@agentflow.example.</p>
-      <details><summary>Do I need to write prompts?</summary><p>No. Describe the outcome in plain language and the agents plan the steps themselves. You can still give detailed instructions when you want to.</p></details>
-      <details><summary>Can agents spend money or send emails without me?</summary><p>Only if you allow it. Approval rules cover sending, publishing and payments by default, and you can tighten them per agent.</p></details>
-      <details><summary>What happens to my data?</summary><p>Your data is never used to train models. You can delete workspaces and history at any time, and export everything first.</p></details>
-      <details><summary>Can I cancel anytime?</summary><p>Yes. Cancel in two clicks from settings. Your agents stop at the end of the billing period and your data stays exportable for 30 days.</p></details>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap final">
-      <h2>Put your busywork on autopilot</h2>
-      <p class="sub">Join 12,000+ teams whose Mondays start finished.</p>
-      <a class="btn btn-primary" href="#pricing">Start free — no credit card</a>
+  <section id="buy">
+    <div class="wrap buy">
+      <h2>Buy the full version — $5</h2>
+      <p class="sub">The full template adds the pricing table, customer testimonial, FAQ and final CTA — and ships clean, without this demo banner.</p>
+      <ol>
+        <li><b>Pay $5</b> in USDC, USDT or SOL on Solana to this wallet:</li>
+      </ol>
+      <code>HqxvhpdWdBvjk1JvCwLdrp3fW47Zt1A8Eg1atDwZ3oQQ</code>
+      <ol start="2">
+        <li><b>Send the transaction ID and your email</b> to <b>@mehdivakili060</b> on X.</li>
+        <li><b>Receive the full version by email</b> within 24 hours.</li>
+      </ol>
     </div>
   </section>
 </main>
@@ -224,16 +161,14 @@
 <footer>
   <div class="wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; width:100%">
     <span>© <span id="year"></span> AgentFlow. All rights reserved.</span>
-    <span><a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="#">Contact</a></span>
+    <span>Demo version of the template</span>
   </div>
 </footer>
 
 <script>
-  // Mobile menu toggle
   document.getElementById('menuBtn').addEventListener('click', function(){
     document.getElementById('navLinks').classList.toggle('open');
   });
-  // Current year in the footer
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
