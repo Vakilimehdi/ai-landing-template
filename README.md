@@ -27,11 +27,13 @@
 
 ### قیمت و خرید
 
-**۵ دلار** — نسخهٔ کامل را این‌طور بخرید:
+**۵ دلار** — نسخهٔ کامل را از فروشگاه بخرید:
 
-1. مبلغ را به کیف پول سولانا واریز کنید: `HqxvhpdWdBvjk1JvCwLdrp3fW47Zt1A8Eg1atDwZ3oQQ` (USDC یا USDT یا SOL در شبکهٔ سولانا)
-2. هش تراکنش و ایمیلت را در ایکس به [@mehdivakili060](https://x.com/mehdivakili060) بفرستید
-3. نسخهٔ کامل را تا ۲۴ ساعت بعد با ایمیل دریافت می‌کنید
+https://github.com/Vakilimehdi/crypto-pay-page
+
+1. مبلغ دقیق را با **USDC در شبکهٔ سولانا** به این کیف پول بفرستید: `HqxvhpdWdBvjk1JvCwLdrp3fW47Zt1A8Eg1atDwZ3oQQ`
+2. امضای تراکنش و کد محصول (`ai-landing`) را به **mehdivakili0@gmail.com** ایمیل کنید
+3. پرداخت روی بلاک‌چین بررسی می‌شود و نسخهٔ کامل معمولاً تا یک ساعت بعد، خودکار با ایمیل می‌رسد
 
 ---
 
@@ -62,11 +64,13 @@ Open `index.html` in a browser or upload it to any static host (GitHub Pages, Ne
 
 ### Price & purchase
 
-**$5** — buy the full version like this:
+**$5** — buy the full version from the store:
 
-1. Pay to the Solana wallet: `HqxvhpdWdBvjk1JvCwLdrp3fW47Zt1A8Eg1atDwZ3oQQ` (USDC, USDT or SOL on Solana)
-2. Send the transaction ID and your email to [@mehdivakili060](https://x.com/mehdivakili060) on X
-3. You will receive the full version by email within 24 hours
+https://github.com/Vakilimehdi/crypto-pay-page
+
+1. Pay the exact price in **USDC on Solana** to: `HqxvhpdWdBvjk1JvCwLdrp3fW47Zt1A8Eg1atDwZ3oQQ`
+2. Email the transaction signature and product code (`ai-landing`) to **mehdivakili0@gmail.com**
+3. The payment is verified on-chain and the full version is emailed to you automatically, usually within an hour
 
 ## License
 
